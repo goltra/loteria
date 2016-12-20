@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="consulta()">
+    <ion-item>
+      <ion-label>Número:</ion-label>
+      <ion-input type="text" [(ngModel)]="decimo.numero" name="numero"></ion-input>
+    </ion-item>
+   <button ion-button type="submit">Consultar</button>
+  </form>
+</ion-content>
