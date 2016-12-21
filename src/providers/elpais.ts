@@ -18,40 +18,51 @@ export class ElpaisService {
   constructor(public http: Http) {
     console.log('Hello Elpais Provider');
   }
-  consultaNumero(numero: number){
-  
-    let response;
+  /** Devuelve una promesa con el resultado de la consulta del
+   * número enviado o el resumen del sorteo. Si enviamos el número
+   * y solicitamos el resumen, prevalecerá el número.
+   */
+  consulta(numero: number=null,resumen: boolean=false){
     let header= new Headers();
-        header.append('Accept','application/json');
-        header.append('Content-Type','text/plain');
+    header.append('Accept','application/json');
+    header.append('Content-Type','text/plain');
 
-     //return this.http.get(urlApi + '?n=' + numero,{headers:header}).map(res=>response=res.json());
-     return new Promise((resolve)=>{
-       console.log('promise');
-       this.http.get(urlApi + '?numero=' + numero,{headers:header})
-       .map(res=>
-          response=res.json()
-        ).subscribe(data=>resolve(data));
-        resolve(response);
-     })
-    
-    // return new Promise((resolve,reject)=>{
-      
-    //   if(!isNaN(Number(numero))){
-    //     let header= new Headers();
-    //     header.append('Accept','application/json');
-    //     header.append('Content-Type','text/plain');
+    return new Promise((resolve,reject)=>{
+      console.log('promise');
+      if(!isNaN(Number(numero))){
+        this.http.get(urlApi + '?numero=' + numero,{headers:header})
+        .map(res=>res.json())
+        .subscribe(data=>resolve(data));
+      } else {
+        reject("El número insertado no es correcto");
+      }
+      if(resumen){
+        this.http.get(urlApi + '?n=resumen')
+        .map(res=>res.json())
+        .subscribe(data=>resolve(data));
+      }
+    });
+  }
+  mensajeEstado(codigoEstado: number){
+     switch(codigoEstado)
+          {
+            case 0:
+              return "el sorteo no ha comenzado aún.";
 
-    //     this.http.get(urlApi + '?n=' + numero,{"headers": header})
-    //     .map(res => res.json())
-    //     .subscribe(data=>{
-    //       console.log(data);
-    //       resolve(data);
-    //     });
-    //   } else {
-    //     reject("Error, el número no es correcto y no se puede comprobar.");
-    //   }
-
-    // });
+            case 1:
+              return "el sorte está en marcha.";
+            
+            case 2:
+              return "el sorteo ha finalizado,pero no se han publicado los resultado finales.";
+            
+            case 3:
+              return "el sorteo ha terminado y ya tenemos un listado pdf.";
+            
+            case 4:
+              return "el sorteo ha terminado y la lista ya es oficial.";
+            
+            default:
+              return "";
+          }
   }
 }
