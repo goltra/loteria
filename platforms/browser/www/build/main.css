@@ -22108,3 +22108,44 @@ sub {
     padding-top: calc(16px + 20px);
   }
 }
+
+.item-inner {
+  border-color: #00a530 !important;
+}
+
+h1 {
+  color: #00a530;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.tabButtonBg {
+  background: #00a530;
+}
+
+ion-icon.tab-button-icon {
+  color: #00a530 !important;
+}
+
+ion-navbar-section {
+  display: none;
+}
+
+ion-thumbnail img {
+  height: auto !important;
+}
+
+page-home .fondoBoton {
+  background: #00a530;
+}
+
+page-resumen .enlacePdf {
+  line-height: 37px;
+  background: blue;
+  padding: 5px;
+  color: white;
+  text-align: center;
+  width: 100%;
+}

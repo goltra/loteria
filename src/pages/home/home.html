@@ -1,21 +1,25 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Consulta tu número</ion-title>
-  </ion-navbar>
+  
 </ion-header>
 
 <ion-content padding>
+  <h1 class="text-center">Consulta tu número</h1>
+  <img src="assets/img/decimo-bg.jpg">
   <form (ngSubmit)="consulta()">
-    <ion-item>
-      <ion-label>Número:</ion-label>
+    <ion-item class="item-divider">
+      <ion-label stacked>Número a comprobar:</ion-label>
       <ion-input type="text" [(ngModel)]="decimo.numero" name="numero"></ion-input>
     </ion-item>
-   <button ion-button type="submit">Consultar</button>
+  <button ion-button type="submit" class="fondoBoton">Consultar</button>
   </form>
-  <div *ngIf="premiado">DECIMO PREMIADO CON {{premio}}</div>
-  <div *ngIf="error==0 && !premiado">TU DÉCIMO NO TIENE PREMIO 😟</div>
+  <div *ngIf="premiado"><strong>DECIMO PREMIADO CON {{premio}} € 💶 💶 💶 💶 </strong></div>
+  <div *ngIf="error==0 && !premiado"><strong>TU DÉCIMO NO TIENE PREMIO 😟</strong></div>
   <div *ngIf="error==0"> 
     <p>Estado del sorteo: {{mensajeEstado}}</p>
-    <!--<p>Última consulta hecha: {{fecha}}</p>-->
+    <p>Última consulta hecha: {{hora}}</p>
   </div>
+  <div>{{ultimoNumeroComprobado}}</div>
+  <sub> 
+    La información mostrada en esta app hace uso de la API proporcionada por el periódico "El Pais" de manera que no existe responsabilidad sobre ella.
+  </sub>
 </ion-content>

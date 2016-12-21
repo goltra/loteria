@@ -27,17 +27,18 @@ export class ElpaisService {
     header.append('Accept','application/json');
     header.append('Content-Type','text/plain');
 
-    return new Promise((resolve,reject)=>{
+
+    return new Promise((resolve)=>{
       console.log('promise');
-      if(!isNaN(Number(numero))){
+      if(!isNaN(Number(numero))&& numero!=null){
+        console.log('numero');
         this.http.get(urlApi + '?numero=' + numero,{headers:header})
         .map(res=>res.json())
         .subscribe(data=>resolve(data));
-      } else {
-        reject("El número insertado no es correcto");
-      }
+      } 
       if(resumen){
-        this.http.get(urlApi + '?n=resumen')
+        console.log('resumen');
+        this.http.get(urlApi + '?resumen=true')
         .map(res=>res.json())
         .subscribe(data=>resolve(data));
       }
