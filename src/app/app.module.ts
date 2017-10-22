@@ -6,6 +6,10 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ElpaisService } from '../providers/elpais';
+import { BrowserModule } from '@angular/platform-browser';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,8 @@ import { ElpaisService } from '../providers/elpais';
     TabsPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    BrowserModule,HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -26,6 +31,6 @@ import { ElpaisService } from '../providers/elpais';
     HomePage,
     TabsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},ElpaisService]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},ElpaisService,StatusBar,SplashScreen]
 })
 export class AppModule {}

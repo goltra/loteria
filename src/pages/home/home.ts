@@ -42,6 +42,7 @@ export class HomePage {
       }
   }
   ionViewDidLoad(){
+    console.log(navigator.userAgent);
      if(/(ipod|iphone|ipad|android)/i.test(navigator.userAgent)){
 				this.platform.ready().then(()=>{
 					 console.log('Platform ready');
