@@ -1,7 +1,56 @@
 {
-  "name": "cordova-plugin-admobpro",
-  "version": "2.25.0",
-  "description": "Ultimate Cordova Plugin for Google AdMob and DFP to monetize hybrid apps. Show mobile Ad with single line of JavaScript. Compatible with Cordova CLI, PhoneGap Build, Intel XDK/Crosswalk, Google ChromeApp, Ionic, Meteor, etc.",
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-admobpro@~2.25.0",
+        "scope": null,
+        "escapedName": "cordova-plugin-admobpro",
+        "name": "cordova-plugin-admobpro",
+        "rawSpec": "~2.25.0",
+        "spec": ">=2.25.0 <2.26.0",
+        "type": "range"
+      },
+      "/Volumes/Datos/Programacion/angular2/loteria"
+    ]
+  ],
+  "_from": "cordova-plugin-admobpro@>=2.25.0 <2.26.0",
+  "_id": "cordova-plugin-admobpro@2.25.2",
+  "_inCache": true,
+  "_location": "/cordova-plugin-admobpro",
+  "_nodeVersion": "4.7.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-admobpro-2.25.2.tgz_1483225069001_0.27338993991725147"
+  },
+  "_npmUser": {
+    "name": "floatinghotpot",
+    "email": "rjfun.mobile@gmail.com"
+  },
+  "_npmVersion": "2.15.11",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-admobpro@~2.25.0",
+    "scope": null,
+    "escapedName": "cordova-plugin-admobpro",
+    "name": "cordova-plugin-admobpro",
+    "rawSpec": "~2.25.0",
+    "spec": ">=2.25.0 <2.26.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-admobpro/-/cordova-plugin-admobpro-2.25.2.tgz",
+  "_shasum": "b7bff0233fdd37178d6259419ae93045a0a19d7b",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-admobpro@~2.25.0",
+  "_where": "/Volumes/Datos/Programacion/angular2/loteria",
+  "author": {
+    "name": "Liming Xie"
+  },
+  "bugs": {
+    "url": "https://github.com/floatinghotpot/cordova-admob-pro/issues"
+  },
   "cordova": {
     "id": "cordova-plugin-admobpro",
     "platforms": [
@@ -11,13 +60,16 @@
       "wp8"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/floatinghotpot/cordova-admob-pro.git"
+  "dependencies": {},
+  "description": "Ultimate Cordova Plugin for Google AdMob and DFP to monetize hybrid apps. Show mobile Ad with single line of JavaScript. Compatible with Cordova CLI, PhoneGap Build, Intel XDK/Crosswalk, Google ChromeApp, Ionic, Meteor, etc.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "b7bff0233fdd37178d6259419ae93045a0a19d7b",
+    "tarball": "http://registry.npmjs.org/cordova-plugin-admobpro/-/cordova-plugin-admobpro-2.25.2.tgz"
   },
-  "bugs": {
-    "url": "https://github.com/floatinghotpot/cordova-admob-pro/issues"
-  },
+  "gitHead": "39807824abb15c15a381b1d496293027cdeae004",
+  "homepage": "https://github.com/floatinghotpot/cordova-admob-pro#readme",
   "keywords": [
     "cordova",
     "admob",
@@ -64,8 +116,20 @@
     "domob",
     "rjfun"
   ],
-  "author": {
-    "name": "Liming Xie"
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "floatinghotpot",
+      "email": "rjfun.mobile@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-admobpro",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/floatinghotpot/cordova-admob-pro.git"
   },
-  "license": "MIT"
+  "scripts": {},
+  "version": "2.25.2"
 }

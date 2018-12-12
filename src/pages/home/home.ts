@@ -32,12 +32,12 @@ export class HomePage {
     //seteo ids para anuncios según plataforma
     if(/(android)/i.test(navigator.userAgent)) {
         this.admobId = {
-            banner: 'ca-app-pub-2437670687236295~9827523479',
+            banner: 'ca-app-pub-2437670687236295/2304256674',
             //interstitial: 'ca-app-pub-jjj/kkk'
         };
       } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
         this.admobId = {
-            banner: 'ca-app-pub-2437670687236295~5257723075',
+            banner: 'ca-app-pub-2437670687236295/6734456277',
         };
       }
   }

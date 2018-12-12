@@ -25697,6 +25697,12 @@ page-home .fondoBoton {
   background: #00a530;
 }
 
+page-home input.text-input.text-input-md {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
 page-resumen .enlacePdf {
   line-height: 37px;
   background: blue;
